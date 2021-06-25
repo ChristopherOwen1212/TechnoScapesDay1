@@ -1,14 +1,16 @@
 var express = require("express");
 var app = express();
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 1212;
 
 app.get('/', (req, res) => {
     res.send('Simple rest api');
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log("Server running on port " + PORT);
 });
+
+module.exports = server;
 
 var Products = require("./product.json");
 
