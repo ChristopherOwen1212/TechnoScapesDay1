@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
     res.send('Simple rest api');
