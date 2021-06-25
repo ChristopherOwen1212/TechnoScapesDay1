@@ -6,9 +6,11 @@ app.get('/', (req, res) => {
     res.send('Simple rest api');
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log("Server running on port " + PORT);
 });
+
+module.exports = server;
 
 var Products = require("./product.json");
 
